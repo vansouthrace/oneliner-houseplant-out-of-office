@@ -1,6 +1,10 @@
-import { mkdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, writeFileSync } from "node:fs";
 
-const ENTRY = "Out of office. The fern hasn't been watered since March and has unionised. Please direct all sunlight to the cactus.";
+// Out-of-office auto-reply from a houseplant, for the
+// "The Houseplant Out-of-Office" bounty on make.fun.
+const entry =
+  "Out of office: ignored since March. Water me, or forward this to someone who actually will.";
 
-mkdirSync('/output', { recursive: true });
-writeFileSync('/output/entry.txt', ENTRY);
+mkdirSync("/output", { recursive: true });
+writeFileSync("/output/entry.txt", entry);
+console.log(entry);
